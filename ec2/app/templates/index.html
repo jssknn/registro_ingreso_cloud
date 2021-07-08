@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Registros de entrada</title>
+<meta charset="utf-8" />
+</head>
+ 
+<body>
+  <table border = "1" cellpadding = "5" cellspacing = "5">
+	{% if items %}
+  <tr>
+    <th>Fecha</th>
+
+    <th>Patente</th>
+  </tr>
+  
+    {% for item in items %}
+  <tr>    
+    <td> {{ item.fecha}}</td>
+    <td>{{ item.patente }}</td>
+  </tr>    
+    {% endfor %}
+
+    {% else %}
+    	<p>No hay enlaces></p>
+    {% endif %}
+  
+  </table>    
+</body>
+</html>
