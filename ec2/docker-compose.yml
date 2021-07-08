@@ -8,7 +8,11 @@ services:
     ports:
       - "8000:8000"
     command: gunicorn -w 1 -b 0.0.0.0:8000 wsgi:server
-
+    environment:
+      - AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+      - AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+      - AWS_DEFAULT_REGION=us-east-2
+      
   nginx:
     container_name: nginx
     restart: always
