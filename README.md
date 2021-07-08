@@ -40,3 +40,6 @@ Tener en cuenta lo siguiente:
 Todo el desplieble se puede hacer con la capa gratuita de aws.
 
 Se agregan archivos para realizar el despliegue de la app en EC2 a través de contenedores junto con gunicorn y nginx.
+
+## Diagrama
+![alt text](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama.png)
