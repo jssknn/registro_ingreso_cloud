@@ -3,7 +3,7 @@ Solución que registra el ingreso de vehículos de manera autónoma a través de
 Aplicación para que los registros puedan ser accedidos por usuarios.
 
 ## Detalles de la solución
-1) Se ejecuta el script w_upload_S3 en la máquina que va a recibir las fotos de la cámara.
+1) Se ejecuta el script w_upload_S3.py en la máquina que va a recibir las fotos de la cámara.
     - Script w_upload_S3.py:
     Detecta la creación de un nuevo archivo en una carpeta específica, es este caso c:/fotos.
     Al producirse el evento de creación, sube el archivo a un bucket de S3.
@@ -17,15 +17,14 @@ Aplicación para que los registros puedan ser accedidos por usuarios.
     - Script lambda.py:
     Detecta el archivo creado en S3, lo envía a REKOGNITION para extraer el texto y 
     con el resultado escribe un registro fecha-hora y patente en la tabla fotos de DYNAMODB.
-    Detalles
-    La lectura de considera al texto como una patente válida si cumple las siguientes condiciones:
+    
+    La lectura se considera al texto como una patente válida si cumple las siguientes condiciones:
       - Letras en mayúsculas.
       - Longitud mayor a 5 y menor que 10.
-      - Posea exactamente 3 digitos.
+      - Posea exactamente 3 dígitos.
     Si el texto detectado no cumple estas condiciones, es informado como "No detectable".
 
 3) Se corre el script flaskaws.py en una instancia de EC2.
-
     - Script flaskaws.py:
     Servicio web que obtiene los registros de la tabla fotos de DYNAMODB y los presenta en formato TABLA.
 
@@ -37,7 +36,7 @@ Tener en cuenta lo siguiente:
   - El costo de almacenamiento y peticiones en S3 para esta solución es mínimo. 
   Ej: 5gb y 10000 peticiones al mes cuestan u$s 0,17.
 
-Todo el desplieble se puede hacer con la capa gratuita de aws.
+Todo la implementación se puede hacer con la capa gratuita de aws.
 
 Se agregan archivos para realizar el despliegue de la app en EC2 a través de contenedores junto con gunicorn y nginx.
 
