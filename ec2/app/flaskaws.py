@@ -10,7 +10,6 @@ def index():
         dynamodb = boto3.resource('dynamodb')
 
         table = dynamodb.Table('fotos')
-        print('aca si')
         response = table.scan()
         items = response['Items']
         return render_template("index.html", items = items)
