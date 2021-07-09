@@ -19,10 +19,11 @@ Aplicación para que los registros puedan ser accedidos por usuarios.
     Detecta el archivo creado en S3, lo envía a REKOGNITION para extraer el texto y 
     con el resultado escribe un registro fecha-hora y patente en la tabla fotos de DYNAMODB.
     
-    La lectura se considera al texto como una patente válida si cumple las siguientes condiciones:
+    La lectura considera al texto como una patente válida si cumple las siguientes condiciones:
       - Letras en mayúsculas.
       - Longitud mayor a 5 y menor que 10.
       - Posea exactamente 3 dígitos.
+      
     Si el texto detectado no cumple estas condiciones, es informado como "No detectable".
 
 3) Se corre el script flaskaws.py en una instancia de EC2.
