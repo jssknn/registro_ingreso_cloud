@@ -43,3 +43,7 @@ Se agregan archivos para realizar el despliegue de la app en EC2 a través de co
 
 ## Diagrama
 ![alt text](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama.png)
+
+## Funcionamiento
+![funcionamiento](https://github.com/jssknn/registro_ingreso_cloud/blob/main/func.gif)
+
