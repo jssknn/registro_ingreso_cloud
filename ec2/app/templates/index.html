@@ -3,10 +3,11 @@
 <head>
 <title>Registros de entrada</title>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">	
 </head>
  
 <body>
-  <table border = "1" cellpadding = "5" cellspacing = "5">
+  <table class="table table-bordered">
 	{% if items %}
   <tr>
     <th>Fecha</th>
@@ -22,7 +23,7 @@
     {% endfor %}
 
     {% else %}
-    	<p>No hay enlaces></p>
+    	<p>No hay datos</p>
     {% endif %}
   
   </table>    
