@@ -42,8 +42,10 @@ Todo la implementación se puede hacer con la capa gratuita de aws.
 
 Se agregan archivos para realizar el despliegue de la app en EC2 a través de contenedores junto con gunicorn y nginx.
 
-## Diagrama
-![alt text](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama.png)
+## Diagramas
+![diagrama](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama.png)
+
+![diagrama app](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama-app.png)
 
 ## Funcionamiento
 ![funcionamiento](https://github.com/jssknn/registro_ingreso_cloud/blob/main/func.gif)
