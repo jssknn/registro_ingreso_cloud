@@ -50,3 +50,6 @@ Se agregan archivos para realizar el despliegue de la app en EC2 a través de co
 ## Funcionamiento
 ![funcionamiento](https://github.com/jssknn/registro_ingreso_cloud/blob/main/func.gif)
 
+## Video explicativo
+https://www.youtube.com/watch?v=ZBHD3fWzrSo
+
