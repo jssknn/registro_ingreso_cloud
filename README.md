@@ -42,6 +42,11 @@ Todo la implementación se puede hacer con la capa gratuita de aws.
 
 Se agregan archivos para realizar el despliegue de la app en EC2 a través de contenedores junto con gunicorn y nginx.
 
+Para poder hacer esto hay que posicionarse en el directorio /ec2 y ejecutar el comando:
+```
+docker-compose up --build -d
+```
+
 ## Diagramas
 ![diagrama](https://github.com/jssknn/registro_ingreso_cloud/blob/main/diagrama.png)
 
