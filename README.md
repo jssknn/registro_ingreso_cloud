@@ -55,6 +55,25 @@ docker-compose up --build -d
 ## Funcionamiento
 ![funcionamiento](https://github.com/jssknn/registro_ingreso_cloud/blob/main/func.gif)
 
+## Estructura de archivos
+```
+.
+├── ec2
+│   ├── app 
+│   │   ├── templates
+│   │   │   └── index.html
+│   │   ├── Dockerfile
+│   │   ├── flaskaws.py
+│   │   ├── requirements.txt
+│   │   └── wsgi.py
+│   ├── nginx
+│   │   ├── nginx.conf          
+│   │   ├── project.conf
+│   │   └── Dockerfile
+│   └── docker-compose.yml
+├── lambda 
+│   └── lambda.py  
+└── w_upload_S3.py
+```
 ## Video explicativo
 https://youtu.be/cMlZxbOvULw
-
