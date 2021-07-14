@@ -3,6 +3,27 @@ Solución que registra el ingreso de vehículos de manera autónoma a través de
 
 Aplicación para que los registros puedan ser accedidos por usuarios.
 
+## Estructura de archivos
+```
+.
+├── ec2
+│   ├── app 
+│   │   ├── templates
+│   │   │   └── index.html
+│   │   ├── Dockerfile
+│   │   ├── flaskaws.py
+│   │   ├── requirements.txt
+│   │   └── wsgi.py
+│   ├── nginx
+│   │   ├── nginx.conf          
+│   │   ├── project.conf
+│   │   └── Dockerfile
+│   └── docker-compose.yml
+├── lambda 
+│   └── lambda.py  
+└── w_upload_S3.py
+```
+
 ## Detalles de la solución
 1) Se ejecuta el script w_upload_S3.py en la máquina que va a recibir las fotos de la cámara.
     - Script w_upload_S3.py:
@@ -55,25 +76,5 @@ docker-compose up --build -d
 ## Funcionamiento
 ![funcionamiento](https://github.com/jssknn/registro_ingreso_cloud/blob/main/func.gif)
 
-## Estructura de archivos
-```
-.
-├── ec2
-│   ├── app 
-│   │   ├── templates
-│   │   │   └── index.html
-│   │   ├── Dockerfile
-│   │   ├── flaskaws.py
-│   │   ├── requirements.txt
-│   │   └── wsgi.py
-│   ├── nginx
-│   │   ├── nginx.conf          
-│   │   ├── project.conf
-│   │   └── Dockerfile
-│   └── docker-compose.yml
-├── lambda 
-│   └── lambda.py  
-└── w_upload_S3.py
-```
 ## Video explicativo
 https://youtu.be/cMlZxbOvULw
